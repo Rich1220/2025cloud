@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build-and-push:
@@ -25,4 +28,3 @@ jobs:
       - name: Push Docker image
         run: |
           docker push rich1220/2025cloud:latest
-
